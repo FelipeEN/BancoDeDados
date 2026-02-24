@@ -1,0 +1,35 @@
+
+-- create
+CREATE TABLE user ( 
+  id INT ,
+  name varchar(250) NOT NULL,
+  email varchar (250) NOT NULL,
+  cpf char(15) NOT NULL,
+  nascimento date NOT NULL,
+   primary key (id)
+);
+
+-- insert
+INSERT INTO user VALUES ( 01, 'Felipe Sena', 'FelipeSena@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 02,'Julia', 'Julia@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 03,'Renato', 'Renato@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 04,'Flavio', 'Flavio@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 05,'Marcos', 'Marcos@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 06,'Renata', 'Renata@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 07,'Lara', 'Lara@gmail.com', '000.000.000-00' , '2000-12-30');
+INSERT INTO user VALUES ( 08,'Flavio', 'Flavio@gmail.com', '000.000.000-00' , '2000-12-30');
+
+
+-- fetch 
+
+CREATE table endereco(
+id INT,
+user_id INT, 
+primary key (id),
+foreign key (user_id) references user (id)
+);
+
+INSERT INTO endereco VALUES (01,01);
+
+SELECT * FROM user ;
+SELECT * FROM endereco ;
